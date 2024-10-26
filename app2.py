@@ -40,5 +40,10 @@ gerador.salvar_imagem(cinza_para_rgb_media, nome+'_cinza_para_rgb_mediana', 'png
 current_directory = os.getcwd()
 image_path = os.path.join(current_directory, "src", "imagens", "imagem-com-ruido.png")
 
+noise_image_path = os.path.join(current_directory, "src", "imagens", "imagem-com-ruido.png")
 removedor_ruido = RemovedorRuido()
-removedor_ruido.remover(image_path)
+removedor_ruido.remover(noise_image_path)
+
+highlighter_image_path = os.path.join(current_directory, "src", "imagens", "imagem-bordas.png")
+edge_highlighter = EdgeHighlighter()
+edge_highlighter.execute(highlighter_image_path)

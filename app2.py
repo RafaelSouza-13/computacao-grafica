@@ -1,4 +1,6 @@
+import os
 from processamento_de_imagem import ConversorGerenciador, GeradorImagem
+from processamento_de_imagem import RemovedorRuido
 
 gerador = GeradorImagem()
 conversor = ConversorGerenciador('media')
@@ -34,3 +36,9 @@ gerador.salvar_imagem(binaria_para_cinza, nome+'_binaria_para_cinza_mediana', 'p
 
 cinza_para_rgb_media = conversor.cinza_para_rgb(binaria_para_cinza)
 gerador.salvar_imagem(cinza_para_rgb_media, nome+'_cinza_para_rgb_mediana', 'png', 'mediana')
+
+current_directory = os.getcwd()
+image_path = os.path.join(current_directory, "src", "images", "imagem-com-ruido.png")
+
+removedor_ruido = RemovedorRuido()
+removedor_ruido.remover(image_path)

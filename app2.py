@@ -38,7 +38,7 @@ cinza_para_rgb_media = conversor.cinza_para_rgb(binaria_para_cinza)
 gerador.salvar_imagem(cinza_para_rgb_media, nome+'_cinza_para_rgb_mediana', 'png', 'mediana')
 
 current_directory = os.getcwd()
-image_path = os.path.join(current_directory, "src", "images", "imagem-com-ruido.png")
+image_path = os.path.join(current_directory, "src", "imagens", "imagem-com-ruido.png")
 
 removedor_ruido = RemovedorRuido()
 removedor_ruido.remover(image_path)

@@ -1,5 +1,5 @@
-from primitivas_graficas import Rasterizacao
-from interface.grid import Grid
+from src.primitivas_graficas import Rasterizacao
+from src.interface.grid import Grid
 
 class PreenchimentoRecursivo(Rasterizacao):
   def __init__(self, ponto, cor, cor_borda, tela: Grid):

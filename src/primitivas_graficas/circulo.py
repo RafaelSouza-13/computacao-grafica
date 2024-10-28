@@ -1,4 +1,4 @@
-from primitivas_graficas import Rasterizacao
+from src.primitivas_graficas import Rasterizacao
 
 class Circulo(Rasterizacao):
     def __init__(self, centro, raio):

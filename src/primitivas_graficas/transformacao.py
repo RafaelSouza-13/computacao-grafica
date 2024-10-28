@@ -1,4 +1,4 @@
-from primitivas_graficas import Rasterizacao, Polilinha
+from src.primitivas_graficas import Rasterizacao, Polilinha
 from math import sin, cos, radians
 import numpy as np
 

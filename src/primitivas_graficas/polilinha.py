@@ -1,4 +1,4 @@
-from primitivas_graficas import Rasterizacao, Bresenham
+from src.primitivas_graficas import Rasterizacao, Bresenham
 
 class Polilinha(Rasterizacao):
     def __init__(self, pontos: list, fechar=False):

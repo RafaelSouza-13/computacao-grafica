@@ -1,4 +1,4 @@
-from primitivas_graficas import Rasterizacao, Bresenham
+from src.primitivas_graficas import Rasterizacao, Bresenham
 
 class RecorteLinha(Rasterizacao):
     def __init__(self, ponto_1, ponto_2, x_min, x_max, y_min, y_max):

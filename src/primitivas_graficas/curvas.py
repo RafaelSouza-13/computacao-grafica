@@ -1,4 +1,4 @@
-from primitivas_graficas import Rasterizacao, Bresenham
+from src.primitivas_graficas import Rasterizacao, Bresenham
 import math
 
 class Curvas(Rasterizacao):

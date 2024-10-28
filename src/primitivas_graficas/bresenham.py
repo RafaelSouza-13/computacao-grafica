@@ -1,4 +1,4 @@
-from primitivas_graficas import Rasterizacao
+from src.primitivas_graficas import Rasterizacao
 
 class Bresenham(Rasterizacao):
     def __init__(self, ponto1, ponto2):

@@ -1,4 +1,4 @@
-from processamento_de_imagem.conversoes import *
+from src.processamento_de_imagem.conversoes import *
 
 class ConversorGerenciador:
     def __init__(self, tipo_conversao):

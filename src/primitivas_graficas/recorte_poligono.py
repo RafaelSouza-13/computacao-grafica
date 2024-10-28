@@ -1,4 +1,4 @@
-from primitivas_graficas import Rasterizacao, Polilinha
+from src.primitivas_graficas import Rasterizacao, Polilinha
 
 class RecortePoligono(Rasterizacao):
     def __init__(self, pts_poligono: list, x_min, x_max, y_min, y_max):

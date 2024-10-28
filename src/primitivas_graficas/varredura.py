@@ -1,4 +1,4 @@
-from primitivas_graficas import Rasterizacao, PontoCritico
+from src.primitivas_graficas import Rasterizacao, PontoCritico
 
 class Varredura(Rasterizacao):
     def __init__(self, poligono):

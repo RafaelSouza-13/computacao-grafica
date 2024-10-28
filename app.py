@@ -1,6 +1,6 @@
 from tkinter import *
-from interface.grid import Grid
-from primitivas_graficas import *
+from src.interface.grid import Grid
+from src.primitivas_graficas import *
 
 tela = Grid(550)
 roxo = '#990099'

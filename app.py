@@ -10,8 +10,8 @@ rosa = '#FF99DD'
 
 #BRESENHAM
 
-linha = Bresenham((2, 3), (4, 9))
-tela.desenhar(linha.saida, roxo)
+# linha = Bresenham((2, 3), (4, 9))
+# tela.desenhar(linha.saida, roxo)
 
 #POLILINHA
 
@@ -67,19 +67,22 @@ tela.desenhar(linha.saida, roxo)
 # tela.destacar_janela(x_min, x_max, y_min, y_max)
 # tela.desenhar(obj.saida, roxo)
 
-#RECORTE DE POLIGONO revisar código
+#RECORTE DE POLIGONO
 
-# pts = [(0, 12), (12, 0), (0, -12)]
-# xmin = -1
-# xmax = 8
-# ymin = -8
-# ymax = 8
-# obj = RecortePoligono(pts, xmin, xmax, ymin, ymax)
-# tela.destacar_janela(xmin, xmax, ymin, ymax)
-# tela.desenhar(obj.saida, roxo)
-#
-# poligonoOriginal = Polilinha(pts, fechar=True)
-# tela.desenhar(poligonoOriginal.saida, roxo)
+#pts = [(0, 8), (8, 0), (0, -8), (-8, 0)]
+pts = [(2, 5), (2, 15), (12, 5)]
+
+x_min = 2
+x_max = 10
+y_min = 5
+y_max = 15
+
+obj = RecortePoligono(pts, x_min, x_max, y_min, y_max)
+tela.destacar_janela(x_min, x_max, y_min, y_max)
+tela.desenhar(obj.saida, roxo)
+
+# poligonoOriginal =  Polilinha(pts, fechar=True)
+# tela.desenhar(poligonoOriginal.saida, rosa)
 
 
 

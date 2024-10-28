@@ -10,7 +10,7 @@ class EdgeHighlighter:
     image = cv2.imread(imagem_path, cv2.IMREAD_GRAYSCALE)
 
     if image is None:
-        print("Erro ao carregar a imagem. Verifique o caminho da imagem.")
+        print("It was not possible to load image.")
         return
 
     sobelx = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=3)

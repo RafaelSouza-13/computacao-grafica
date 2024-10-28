@@ -9,7 +9,7 @@ class NoiseRemover:
     original_image = cv2.imread(imagem_path)
 
     if original_image is None:
-        print("Erro ao carregar a imagem. Verifique o caminho da imagem.")
+        print("It was not possible to load image.")
         return
 
     mean_image = cv2.blur(original_image, (5, 5))

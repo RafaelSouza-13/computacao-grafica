@@ -11,6 +11,9 @@ class ConversorGerenciador:
         elif self.tipo_conversao == 'mediana':
             conversor = ConversaoMediana()
             imagem_cinza = conversor.rgb_para_cinza(imagem)
+        elif self.tipo_conversao == 'gausianno':
+            conversor = ConversaoGaussiana()
+            imagem_cinza = conversor.rgb_para_cinza(imagem)
         else:
             raise ValueError("Tipo de conversão inválido.")
 
@@ -22,6 +25,9 @@ class ConversorGerenciador:
             imagem_binario = conversor.cinza_para_binario(imagem_cinza)
         elif self.tipo_conversao == 'mediana':
             conversor = ConversaoMediana()
+            imagem_binario = conversor.cinza_para_binario(imagem_cinza)
+        elif self.tipo_conversao == 'gausianno':
+            conversor = ConversaoGaussiana()
             imagem_binario = conversor.cinza_para_binario(imagem_cinza)
         else:
             raise ValueError("Tipo de conversão inválido.")

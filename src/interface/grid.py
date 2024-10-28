@@ -75,4 +75,4 @@ class Grid:
   def destacar_janela(self, xmin, xmax, ymin, ymax):
     xmin, ymin = self.converter_coordenadas(xmin, ymin)
     xmax, ymax = self.converter_coordenadas(xmax + 1, ymax + 1)
-    self.tela.create_rectangle(xmin, ymin, xmax, ymax, outline='green')
+    self.tela.create_rectangle(xmin, ymin, xmax, ymax, outline='red')

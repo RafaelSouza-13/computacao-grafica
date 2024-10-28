@@ -8,7 +8,7 @@ class Bresenham(Rasterizacao):
 
 
         self.pontosFinais = []
-        self.trocaX = self.trocaY = self.trocaXY = False
+        self.troca_x = self.troca_y = self.troca_xy = False
 
         if ponto1 == ponto2:  # Caso trivial
             self.saida = [ponto1]
@@ -16,50 +16,50 @@ class Bresenham(Rasterizacao):
 
         self.calcular_octante()
 
-        deltaX = self.x_final - self.x_inicial
-        deltaY = self.y_final - self.y_inicial
+        delta_x= self.x_final - self.x_inicial
+        delta_y = self.y_final - self.y_inicial
 
-        m = deltaY / deltaX if deltaX != 0 else float('inf')
+        m = delta_y / delta_x if delta_x!= 0 else float('inf')
         erro = m - 0.5
 
-        auxX, auxY = self.x_inicial, self.y_inicial
-        self.pontosFinais.append([auxX, auxY])
+        aux_x, aux_y = self.x_inicial, self.y_inicial
+        self.pontosFinais.append([aux_x, aux_y])
 
-        while auxX < self.x_final:
+        while aux_x < self.x_final:
             if erro >= 0:
-                auxY += 1
+                aux_y += 1
                 erro -= 1
-            auxX += 1
+            aux_x += 1
             erro += m
-            self.pontosFinais.append([auxX, auxY])
+            self.pontosFinais.append([aux_x, aux_y])
 
         self.aplicar_reflexao(self.pontosFinais)
         self.saida = self.pontosFinais
 
     def calcular_octante(self):
-        deltaX = self.x_final - self.x_inicial
-        deltaY = self.y_final - self.y_inicial
+        delta_x= self.x_final - self.x_inicial
+        delta_y = self.y_final - self.y_inicial
 
-        m = deltaY / deltaX if deltaX != 0 else 2
+        m = delta_y / delta_x if delta_x!= 0 else 2
 
         if abs(m) > 1:
             self.x_inicial, self.y_inicial = self.y_inicial, self.x_inicial
             self.x_final, self.y_final = self.y_final, self.x_final
-            self.trocaXY = True
+            self.troca_xy = True
 
         if self.x_inicial > self.x_final:
             self.x_inicial, self.x_final = -self.x_inicial, -self.x_final
-            self.trocaX = True
+            self.troca_x = True
 
         if self.y_inicial > self.y_final:
             self.y_inicial, self.y_final = -self.y_inicial, -self.y_final
-            self.trocaY = True
+            self.troca_y = True
 
     def aplicar_reflexao(self, pontos: list):
         for ponto in pontos:
-            if self.trocaY:
+            if self.troca_y:
                 ponto[1] = -ponto[1]
-            if self.trocaX:
+            if self.troca_x:
                 ponto[0] = -ponto[0]
-            if self.trocaXY:
+            if self.troca_xy:
                 ponto[0], ponto[1] = ponto[1], ponto[0]

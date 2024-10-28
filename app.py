@@ -10,7 +10,7 @@ rosa = '#FF99DD'
 
 #BRESENHAM
 
-linha = Bresenham((2, 3), (4, 9))
+linha = Bresenham((4, 4), (9, 3))
 tela.desenhar(linha.saida, roxo)
 
 #POLILINHA

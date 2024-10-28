@@ -1,8 +1,8 @@
 /images_geradas
 .idea
 __pycache__/
-# src/images/result/edge-highlighter
-# !src/images/result/edge-highlighter/.gitkeep
+src/images/result/edge-highlighter
+!src/images/result/edge-highlighter/.gitkeep
 
-# src/images/result/gausianno
-# !src/images/result/gausianno/.gitkeep
+src/images/result/gausianno
+!src/images/result/gausianno/.gitkeep

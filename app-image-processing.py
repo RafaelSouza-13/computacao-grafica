@@ -56,12 +56,6 @@ cinza_para_binaria = conversor.cinza_para_binaria(rgb_para_cinza)
 imagem_gausianno_path = os.path.join(current_directory, "src", "images", "result", "gausianno", "gausianno-cinza-para-binario.png")
 cv2.imwrite(imagem_gausianno_path, cinza_para_binaria)
 
-binaria_para_cinza = conversor.binario_para_cinza(cinza_para_binaria)
-gerador.salvar_imagem(binaria_para_cinza, nome+'_binaria_para_cinza_mediana', 'png', 'mediana')
-
-cinza_para_rgb_media = conversor.cinza_para_rgb(binaria_para_cinza)
-gerador.salvar_imagem(cinza_para_rgb_media, nome+'_cinza_para_rgb_mediana', 'png', 'mediana')
-
 noise_image_path = os.path.join(current_directory, "src", "images", "imagem-com-ruido.png")
 noise_remover = NoiseRemover()
 noise_remover.execute(noise_image_path)
